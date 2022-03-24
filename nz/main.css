@@ -4,21 +4,26 @@ body {
     background-color: #eeeeee;
 
 }
-header{
+
+header {
     text-align: center;
 }
-.user{
+
+.user {
     border-radius: 50%;
 }
-img.user{
+
+img.user {
     border-radius: 10%;
     margin-top: -50px;
 }
+
 main {
     background-color: white;
     max-width: 1024px;
     margin: auto;
 }
+
 img.banner {
     width: 100%;
 }
@@ -28,26 +33,35 @@ article {
     text-align: justify;
 }
 
-article p{
-text-align: justify;
-line-height: 1.2em;
+article p {
+    text-align: justify;
+    line-height: 1.2em;
 }
+
 article figure img {
     width: 100%;
 }
 
-a{
-    color:black;
+a {
+    color: black;
 
 }
+
 footer {
     border-top: 1px solid black;
     padding: 1em 2em 3em 2em;
 }
+
 footer .back {
     float: left;
 
 }
-footer .next{
+
+footer .next {
     float: right;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
