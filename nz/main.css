@@ -7,6 +7,12 @@ body {
 header{
     text-align: center;
 }
+.user{
+    border-radius: 50%;
+}
+img.user{
+    border-radius: 10%;
+}
 main {
     background-color: white;
     max-width: 1024px;
