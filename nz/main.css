@@ -1,0 +1,11 @@
+/* stile für die neuseelandreise */
+
+body{
+    background-color: silver;
+
+}
+
+main {
+    background-color: white;
+    max-width: 1024px;
+}
