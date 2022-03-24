@@ -12,12 +12,15 @@ header{
 }
 img.user{
     border-radius: 10%;
-    margin: -120;
+    margin-top: -50px;
 }
 main {
     background-color: white;
     max-width: 1024px;
     margin: auto;
+}
+img.banner {
+    width: 100%;
 }
 
 article {
@@ -37,4 +40,11 @@ a{
 footer {
     border-top: 1px solid black;
     padding: 1em 2em 3em 2em;
+}
+footer .back {
+    float: left;
+
+}
+footer .next{
+    float: right;
 }
