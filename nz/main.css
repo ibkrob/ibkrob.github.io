@@ -1,7 +1,7 @@
 /* stile für die neuseelandreise */
 /* Google Fonts*/
 
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:wght@300&display=swap);
 
 body {
     background-color: #eeeeee;
@@ -14,7 +14,10 @@ main p{
 
 }
 
+
+
 header {
+    font-family: "Montserrat";
         text-align: center;
 }
 
