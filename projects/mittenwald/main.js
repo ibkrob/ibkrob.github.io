@@ -18,3 +18,9 @@ L.marker([47.442, 11.258]).addTo(map)
     .bindPopup('Mittenwald')
 
     .openPopup();
+
+var map = new L.Map('map', {
+fullscreenControl: true,
+fullscreenControlOptions: {
+position: 'topleft'}
+});
