@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mittenwald</title>
 
 <!--Tab Vorschaubild-->
@@ -12,6 +13,8 @@
 
 <!--Stile einfügen-->
     <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+	<script src="Control.FullScreen.js"></script>
     <!-- Font awesome einbauen-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
@@ -20,6 +23,8 @@
 <!--Header (Querformat mit 1280x365 Pixel)-->
 <!--Userbild: user.jpg (quadratisch mit 100x100 Pixel)-->
 <!--Attraktion: attraction.webp oder attraction.jpg (Querformat mit 900 Pixel Breite, die Höhe kann variieren)-->
+
+<!--Header-Bereich-->
     <main class="shadow">
         <header>
             <img class="banner" src="images/header.jpg"
@@ -38,7 +43,7 @@
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0usPJh2952LJtZO5OGbcBU?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
 </iframe>
 </div>
-
+<!--Haupt-Bereich-->
                 <figure>
                     <img class="img.user" src="images/attraction.jpg"
                         alt="Der Markt Mittenwald mit Kirche im Zentrum.">
@@ -48,9 +53,11 @@
                 <path
                     d="M64 64V48C64 39.16 71.16 32 80 32H144C152.8 32 160 39.16 160 48V64H192L242.5 38.76C251.4 34.31 261.2 32 271.1 32H448C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V128C0 92.65 28.65 64 64 64zM220.6 121.2C211.7 125.7 201.9 128 192 128H64V192H178.8C200.8 176.9 227.3 168 256 168C284.7 168 311.2 176.9 333.2 192H448V96H271.1L220.6 121.2zM256 216C207.4 216 168 255.4 168 304C168 352.6 207.4 392 256 392C304.6 392 344 352.6 344 304C344 255.4 304.6 216 256 216z" />
                 </svg><a -->
+<!--Kartenbereich-->
                     <h3>Übersichtskarte</h3>
                     <div id="map">
-                        <!-- Leaflet Biblothek -->
+
+<!-- Leaflet Biblothek -->
                         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
                             integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
                             crossorigin="" />
@@ -59,13 +66,13 @@
                             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
                             crossorigin=""></script>
 
-                        <!--Kartenskript-->
+<!--Kartenskript-->
                         <script defer src="main.js"></script>
-                        <!--Adding Map-Fullscreen-->
+<!--Adding Map-Fullscreen-->
                         <link rel="stylesheet" href="Control.FullScreen.css" />
                         <script src="Control.FullScreen.js"></script>
 
-                                            </div>
+                    </div>
                     <h3>Links</h3>
                     <ul>
                         <li><a href="https://de.wikipedia.org/wiki/Mittenwald">Der Markt Mittenwald</a></li>
