@@ -1,7 +1,7 @@
 /* Neuseelandreise Skript */
 // einzeiliger Kommentar
 
-var map = L.Map('map', {
+var map = L.map('map', {
     fullscreenControl: true,
     fullscreenControlOptions: {
     position: 'topleft'}
