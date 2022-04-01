@@ -19,7 +19,7 @@ header{
 
 }
 header.jpg{
-    text-align: center;
+    max-width: 1024px;
 }
 
 h1, h2, h3 {
