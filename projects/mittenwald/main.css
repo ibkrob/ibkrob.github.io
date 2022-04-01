@@ -18,6 +18,9 @@ header{
     text-align: center;
 
 }
+header.jpg{
+    text-align: center;
+}
 
 h1, h2, h3 {
     font-family: "Montserrat";
