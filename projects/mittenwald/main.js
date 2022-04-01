@@ -1,9 +1,12 @@
 /* Neuseelandreise Skript */
 // einzeiliger Kommentar
 
-var map = L.map('map').setView([47.442, 11.258], 5);
-
-
+var map = new L.Map('map', {
+    fullscreenControl: true,
+    fullscreenControlOptions: {
+    position: 'topleft'}
+    })
+    .setView([47.442, 11.258], 5);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
@@ -19,8 +22,3 @@ L.marker([47.442, 11.258]).addTo(map)
 
     .openPopup();
 
-var map = new L.Map('map', {
-fullscreenControl: true,
-fullscreenControlOptions: {
-position: 'topleft'}
-});
