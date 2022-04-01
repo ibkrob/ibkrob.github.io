@@ -1,7 +1,7 @@
 /* Neuseelandreise Skript */
 // einzeiliger Kommentar
 
-var map = L.map('map').setView([-41.290, 174.006], 5);
+var map = L.map('map').setView([47.442, 11.258], 5);
 
 
 
@@ -13,8 +13,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 
-L.marker([-41.290, 174.006]).addTo(map)
+L.marker([47.442, 11.258]).addTo(map)
 
-    .bindPopup('Picton')
+    .bindPopup('Mittenwald')
 
     .openPopup();
