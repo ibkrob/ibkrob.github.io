@@ -68,6 +68,9 @@ for (let etappe of ETAPPEN) {
         //console.log(etappe);
         L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
 }
-// https://webmapping.github.io/nz/huts.js
-//1. hut.js in js 
-//2. marker als vorschleife 
+
+//DOC Hütten anzeigen 
+for (let hut of HUTS) {
+    //console.log(etappe);
+    L.circleMarker([hut.lat, hut.lng]).addTo(map)
+}
