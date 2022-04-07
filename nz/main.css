@@ -1,12 +1,13 @@
 /* stile für die neuseelandreise */
-/* Google Fonts*/
 
+/* Google Fonts*/
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:wght@300&display=swap);
 
 body {
     background-color: #eeeeee;
     font-family: Verdana, Arial, Helvetica, sans-serif
 }
+
 
 main p {
     font-family: "Roboto"
@@ -21,7 +22,7 @@ header {
 h1,
 h2,
 h3 {
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
@@ -41,7 +42,7 @@ main {
     margin: auto;
 }
 
-banner {
+img.banner {
     width: 100%;
 }
 
