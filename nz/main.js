@@ -5,24 +5,24 @@ let lng = 174.006
 let zoom = 5
 
 let coords = [-39.13, 175.65];
-console.log(coords);
-console.log(coords[0]);
-console.log(coords[1]);
-console.log(coords.length);
+//console.log(coords);
+//console.log(coords[0]);
+//console.log(coords[1]);
+//console.log(coords.length);
 
-console.log("text");
-console.log('text');
-console.log('id="map"');
-console.log(`latitude = ${lat}`);
+//console.log("text");
+//console.log('text');
+//console.log('id="map"');
+//console.log(`latitude = ${lat}`);
 
-console.log(ETAPPEN);
-console.log(ETAPPEN[0]);
-console.log(ETAPPEN[0].nr)
-console.log(ETAPPEN[0].github)
-console.log(ETAPPEN[0].titel)
-console.log(ETAPPEN[0].wikipedia)
-console.log(ETAPPEN[0].lat)
-console.log(ETAPPEN[0].lng)
+//console.log(ETAPPEN);
+//console.log(ETAPPEN[0]);
+//console.log(ETAPPEN[0].nr)
+//console.log(ETAPPEN[0].github)
+//console.log(ETAPPEN[0].titel)
+//console.log(ETAPPEN[0].wikipedia)
+//console.log(ETAPPEN[0].lat)
+//console.log(ETAPPEN[0].lng)
 
 
 
@@ -35,10 +35,7 @@ let popup =`
             <li> geogr. Breite: ${ETAPPEN[0].lat} </li>
             <li> <a href="${ETAPPEN[0].wikipedia}" > Link zur Wikipediaseite </a></li>
             <li> <a href="${ETAPPEN[0].github}" > Link zur Etappenseite </a></li>
-            <li> <a href="${ETAPPEN[0].wikipedia}" > Link zur Wikipediaseite </a></li>
-
-
-        </ul>
+</ul>
 `;
 let map = L.map('map').setView(coords, zoom);
 
@@ -57,3 +54,9 @@ L.marker([lat, lng]).addTo(map)
     .bindPopup(popup)
 
     .openPopup();
+
+    for (let etappe of ETAPPEN) {
+        //console.log(etappe)
+        L.marker([etappe.lat, etappe.lng]).addTo(map);
+
+}
