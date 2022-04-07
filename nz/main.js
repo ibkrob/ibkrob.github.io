@@ -9,6 +9,19 @@ console.log(coords);
 console.log(coords[0]);
 console.log(coords[1]);
 console.log(coords.length);
+
+console.log("text");
+console.log('text');
+console.log('id="map"');
+console.log(`latitude = ${lat}`);
+
+let popup =`
+        <h3> Picton </h3>
+        <ul>
+            <li> geogr. Länge: ${lng}</li>
+            <li> geogr. Breite: ${lat} </li>
+        </ul>
+`
 let map = L.map('map').setView(coords, zoom);
 
 
@@ -23,6 +36,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 L.marker([lat, lng]).addTo(map)
 
-    .bindPopup('Picton')
+    .bindPopup(popup)
 
     .openPopup();
