@@ -29,12 +29,17 @@ console.log(ETAPPEN[0].lng)
 
 
 let popup =`
-        <h3> Picton </h3>
+        <h3> ${ETAPPEN[0].titel}  (Etappe ${ETAPPEN[0].nr}) </h3>
         <ul>
-            <li> geogr. Länge: ${lng}</li>
-            <li> geogr. Breite: ${lat} </li>
+            <li> geogr. Länge: ${ETAPPEN[0].lng}</li>
+            <li> geogr. Breite: ${ETAPPEN[0].lat} </li>
+            <li> <a href="${ETAPPEN[0].wikipedia}" > Link zur Wikipediaseite </a></li>
+            <li> <a href="${ETAPPEN[0].github}" > Link zur Etappenseite </a></li>
+            <li> <a href="${ETAPPEN[0].wikipedia}" > Link zur Wikipediaseite </a></li>
+
+
         </ul>
-`
+`;
 let map = L.map('map').setView(coords, zoom);
 
 
