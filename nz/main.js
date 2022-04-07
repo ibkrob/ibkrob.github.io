@@ -1,7 +1,9 @@
 /* Neuseelandreise Skript */
 // einzeiliger Kommentar
-
-var map = L.map('map').setView([-41.290, 174.006], 5);
+let lat = -41.290
+let lng = 174.006
+let zoom = 5
+let map = L.map('map').setView([lat, lng], zoom);
 
 
 
@@ -13,7 +15,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 
-L.marker([-41.290, 174.006]).addTo(map)
+L.marker([lat, lng]).addTo(map)
 
     .bindPopup('Picton')
 
