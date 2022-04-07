@@ -28,7 +28,7 @@ let coords = [-39.13, 175.65];
 
 
 
-let popup =`
+let popup = `
         <h3> ${ETAPPEN[0].titel}  (Etappe ${ETAPPEN[0].nr}) </h3>
         <ul>
             <li> geogr. Länge: ${ETAPPEN[0].lng}</li>
@@ -54,9 +54,9 @@ L.marker([lat, lng]).addTo(map)
     .bindPopup(popup)
 
     .openPopup();
-    
+
 for (let etappe of ETAPPEN) {
-        let popup =`
+    let popup = `
         <h3> ${etappe.titel}  (Etappe ${etappe.nr}) </h3>
         <ul>
             <li> geogr. Länge: ${etappe.lng}</li>
@@ -65,9 +65,15 @@ for (let etappe of ETAPPEN) {
             <li> <a href="https://${etappe.github}.github.io/nz/" > Link zur Etappenseite </a></li>
         </ul>
         `;
-        //console.log(etappe);
-        L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
+    //console.log(etappe);
+    L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
+
+    //Etappennavigation erweitern
+    let link = `<a href="https://${etappe.github}.github.io/nz/"> ${etappe.nr} </a>`;
+    document.querySelector("#navigation").innerHTML += link;
 };
+
+
 
 //DOC Hütten anzeigen 
 for (let hut of HUTS) {
