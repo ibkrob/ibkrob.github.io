@@ -3,7 +3,13 @@
 let lat = -41.290
 let lng = 174.006
 let zoom = 5
-let map = L.map('map').setView([lat, lng], zoom);
+
+let coords = [-39.13, 175.65];
+console.log(coords);
+console.log(coords[0]);
+console.log(coords[1]);
+console.log(coords.length);
+let map = L.map('map').setView(coords, zoom);
 
 
 
