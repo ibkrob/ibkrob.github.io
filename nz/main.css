@@ -6,22 +6,23 @@
 body {
     background-color: #eeeeee;
     font-family: Verdana, Arial, Helvetica, sans-serif
-
 }
 
-main p{
+main p {
     font-family: "Roboto"
 
 }
 
-header{
+header {
     text-align: center;
 
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Montserrat";
-        text-align: center;
+    text-align: center;
 }
 
 .user {
@@ -49,6 +50,7 @@ banner {
     height: 600px;
     border: 1px solid gray;
 }
+
 article {
     padding: 1em;
     text-align: justify;
