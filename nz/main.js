@@ -14,7 +14,18 @@ console.log("text");
 console.log('text');
 console.log('id="map"');
 console.log(`latitude = ${lat}`);
+
 console.log(ETAPPEN);
+console.log(ETAPPEN[0]);
+console.log(ETAPPEN[0].nr)
+console.log(ETAPPEN[0].github)
+console.log(ETAPPEN[0].titel)
+console.log(ETAPPEN[0].wikipedia)
+console.log(ETAPPEN[0].lat)
+console.log(ETAPPEN[0].lng)
+
+
+
 
 
 let popup =`
