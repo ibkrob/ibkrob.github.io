@@ -54,9 +54,20 @@ L.marker([lat, lng]).addTo(map)
     .bindPopup(popup)
 
     .openPopup();
-
-    for (let etappe of ETAPPEN) {
-        //console.log(etappe)
-        L.marker([etappe.lat, etappe.lng]).addTo(map);
-
+    
+for (let etappe of ETAPPEN) {
+        let popup =`
+        <h3> ${etappe.titel}  (Etappe ${etappe.nr}) </h3>
+        <ul>
+            <li> geogr. Länge: ${etappe.lng}</li>
+            <li> geogr. Breite: ${etappe.lat} </li>
+            <li> <a href="${etappe.wikipedia}" > Link zur Wikipediaseite </a></li>
+            <li> <a href="https://${etappe.github}.github.io/nz/" > Link zur Etappenseite </a></li>
+        </ul>
+        `;
+        //console.log(etappe);
+        L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
 }
+// https://webmapping.github.io/nz/huts.js
+//1. hut.js in js 
+//2. marker als vorschleife 
