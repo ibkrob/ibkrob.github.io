@@ -34,10 +34,18 @@ L.marker([47.442, 11.258]).addTo(map)
     
     }).addTo(map);
     
-    
+    let popup = `
+        <h3> BCM Season Opener 2022 </h3>
+        <ul>
+            <li> 23.04.2022 | AB 11 UHR | PARKPLATZ LUTTENSEELIFTE</li>
+            <li> Luttensee-Parkplatz, Kranzberg </li>
+            <li> <a href="${ETAPPEN[0].wikipedia}" > Link zur Detailkarte </a></li>
+            <li> <a href="${ETAPPEN[0].github}" > Link zum Flyerdownload </a></li>
+</ul>
+`;
     
     L.marker([47.442, 11.258]).addTo(map)
     
-        .bindPopup('Mittenwald')
+        .bindPopup(popup)
     
         .openPopup();
