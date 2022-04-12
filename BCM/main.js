@@ -1,4 +1,4 @@
-/* Neuseelandreise Skript */
+/* BCM Skript */
 // einzeiliger Kommentar
     var map = L.map('map', {
         fullscreenControl: true,
@@ -20,7 +20,7 @@
         </ul>
 `;
     
-L.marker([47.456, 11.254]).addTo(map)
+L.marker([47.45611661151047, 11.254835822971142]).addTo(map)
     
         .bindPopup(popup)
     
