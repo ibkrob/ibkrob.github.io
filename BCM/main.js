@@ -21,3 +21,23 @@ L.marker([47.442, 11.258]).addTo(map)
 
     .openPopup();
 
+
+    var map = L.map('map', {
+        fullscreenControl: true,
+        fullscreenControlOptions: {
+        position: 'topleft'}
+        }).setView([47.442, 11.258], 5);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    
+    }).addTo(map);
+    
+    
+    
+    L.marker([47.442, 11.258]).addTo(map)
+    
+        .bindPopup('Mittenwald')
+    
+        .openPopup();
