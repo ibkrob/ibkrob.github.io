@@ -6,6 +6,8 @@
         position: 'topleft'}
         }).setView([47.456, 11.254], 13);
     
+
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
