@@ -17,6 +17,8 @@
         <ul>
             <li> 23.04.2022 | AB 11 UHR | PARKPLATZ LUTTENSEELIFTE</li>
             <li> Luttensee-Parkplatz, Kranzberg </li>
+            <li><a href="https://ibkrob.github.io/routenverlauf/">Information zur geführten Tour</a></li>
+            <li><a href="https://ibkrob.github.io/detailmap/">Informationen zur Expo</a></li>
         </ul>
 `;
     
