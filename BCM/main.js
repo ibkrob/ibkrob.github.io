@@ -1,14 +1,15 @@
 /* BCM Skript */
-// einzeiliger Kommentar
+
+// 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     var map = L.map('map', {
         fullscreenControl: true,
         fullscreenControlOptions: {
         position: 'topleft'}
         }).setView([47.456, 11.254], 13);
     
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://a.tile.opentopomap.org/{z}/{x}/{y}.png', {
     
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; R.Sussbauer <a href="https://www.openstreetmap.org/copyright">Kartendaten: © OpenStreetMap-Mitwirkende, SRTM | Kartendarstellung: © OpenTopoMap (CC-BY-SA)</a> '
     
     }).addTo(map);
     

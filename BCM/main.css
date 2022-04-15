@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:wght@300&display=swap);
 
 body {
-    background-color: #eeeeee;
+    background-color: #8f8f8f;
     font-family: Verdana, Arial, Helvetica, sans-serif
 }
 
@@ -56,6 +56,23 @@ img.banner {
     height: 600px;
     border: 1px solid gray;
 }
+
+button {
+    background-color: #e7e7e7; /* Grey */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+  }
+
+button:hover {
+    background-color: #931a1a; /* red */
+    color: white;
+  }
 
 /* LIST #2 */
 #list2 { width:320px; text-align: center }
