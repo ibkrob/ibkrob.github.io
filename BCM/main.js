@@ -17,9 +17,9 @@
         <ul>
             <li> 23.04.2022 | AB 11 UHR | PARKPLATZ LUTTENSEELIFTE</li>
             <li> Luttensee-Parkplatz, Kranzberg </li>
-            <li><a href="https://ibkrob.github.io/routenverlauf/">Information zur geführten Tour</a></li>
-            <li><a href="https://ibkrob.github.io/detailmap/">Informationen zur Expo</a></li>
-            <li><a href="https://ibkrob.github.io/BCM/printmap.html">Informationen als Printmap zum Download</a></li>
+            <li><a href="https://ibkrob.github.io/routenverlauf/"target="BCM Tour">Information zur geführten Tour</a></li>
+            <li><a href="https://ibkrob.github.io/detailmap/" target="BCM Expo">Informationen zur Expo</a></li>
+            <li><a href="https://ibkrob.github.io/BCM/printmap.html" target="BCM Printmap">Informationen als Printmap zum Download</a></li>
         </ul>
 `;
     
