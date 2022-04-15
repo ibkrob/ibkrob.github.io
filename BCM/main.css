@@ -57,6 +57,13 @@ img.banner {
     border: 1px solid gray;
 }
 
+/* LIST #2 */
+#list2 { width:320px; text-align: center }
+#list2 ol { font-style: oblique; font-family: sans-serif, 'Montserrat'; text-align: center; font: size 15px; color:#383b3d;  }
+#list2 ol li { text-align: center; }
+#list2 ol li p {  padding:8px; font-style:normal; font-family: sans-serif; text-align: center ;font-size:13px; color:#383b3d; border-left: 1px solid #999; }
+#list2 ol li p em { text-align: center; display:block; }
+
 article {
     padding: 1em;
     text-align: justify;
