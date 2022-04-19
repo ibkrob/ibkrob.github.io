@@ -82,7 +82,7 @@
     &mdash; <span class="minele"><span class="summarylabel">Min Elevation: </span><span class="summaryvalue">0</span></span></div>
 
   <script>
-  var opts = {"map": {"center": [41.4583, 12.7059], "zoom": 5, "markerZoomAnimation": false, "zoomControl": false}, "zoomControl": {"position": "topleft"}, "elevationControl": {"data": "RoutenverlaufSeasonOpener.geojson", "options": {"position": "topright", "theme": "custom-theme", "useHeightIndicator": true, "collapsed": false, "detachedView": true, "elevationDiv": "#elevation-div", "followPositionMarker": false, "autohide": false}}, "layersControl": {"options": {"collapsed": false}}, "otmLayer": {"url": "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", "options": {"attribution": "Map data: &copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenTopoMap</a>, <a href=\"http://viewfinderpanoramas.org\">SRTM</a> | Map style: &copy; <a href=\"https://opentopomap.org\">OpenTopoMap</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA</a>)"}}} ;
+  var opts = {"map": {"center": [41.4583, 12.7059], "zoom": 5, "markerZoomAnimation": false, "zoomControl": false}, "zoomControl": {"position": "topleft"}, "elevationControl": {"data": "RoutenverlaufSeasonOpener.geojson" , "options": {"position": "topright", "theme": "custom-theme", "useHeightIndicator": true, "collapsed": false, "detachedView": true, "elevationDiv": "#elevation-div", "followPositionMarker": false, "autohide": false}}, "layersControl": {"options": {"collapsed": false}}, "otmLayer": {"url": "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", "options": {"attribution": "Map data: &copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenTopoMap</a>, <a href=\"http://viewfinderpanoramas.org\">SRTM</a> | Map style: &copy; <a href=\"https://opentopomap.org\">OpenTopoMap</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA</a>)"}}} ;
     var map = new L.Map('map', opts.map);
 
     var baseLayers = {};
@@ -96,7 +96,8 @@
     controlLayer.addTo(map);
 
     map.addLayer(baseLayers.OTM);
-
+  
+    
     map.on('eledata_loaded', function(e) {
       var q = document.querySelector.bind(document);
       var track = e.track_info;
