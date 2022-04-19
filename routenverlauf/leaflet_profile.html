@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>QGIS Track Profile 2 Web</title>
+  <title>BCM Season Opener</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <style>
@@ -77,7 +77,7 @@
 
   <div id="map"></div>
   <div id="elevation-div" class="leaflet-control elevation"></div>
-
+  
   <div id="data-summary" class="data-summary"><span class="totlen"><span class="summarylabel">Total Length: </span><span class="summaryvalue">0</span></span> &mdash; <span class="maxele"><span class="summarylabel">Max Elevation: </span><span class="summaryvalue">0</span></span>
     &mdash; <span class="minele"><span class="summarylabel">Min Elevation: </span><span class="summaryvalue">0</span></span></div>
 
@@ -102,12 +102,12 @@
       var track = e.track_info;
 
       controlLayer.addOverlay(e.layer, e.name);
-
+      
       q('.totlen .summaryvalue').innerHTML = track.distance.toFixed(2) + " km";
       q('.maxele .summaryvalue').innerHTML = track.elevation_max.toFixed(2) + " m";
       q('.minele .summaryvalue').innerHTML = track.elevation_min.toFixed(2) + " m";
-    });
-
+      });
+    
     controlElevation.loadChart(map);
     controlElevation.loadData(opts.elevationControl.data);
   </script>
