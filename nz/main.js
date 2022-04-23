@@ -4,7 +4,7 @@ let lat = -41.290;
 let lng = 174.006;
 let zoom = 11;
 
-let coords = [-41.290,174.006];
+let coords = [-41.290, 174.006];
 //console.log(coords);
 //console.log(coords[0]);
 //console.log(coords[1]);
@@ -86,6 +86,4 @@ for (let hut of HUTS) {
         <hr>
         <a href="${hut.link}" target="Neuseeland" >Link zur Hütte </a>
     `;
-    //console.log(etappe);
-    L.circleMarker([hut.lat, hut.lng]).addTo(map).bindPopup(popup)
 };
