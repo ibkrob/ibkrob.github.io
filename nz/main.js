@@ -2,7 +2,7 @@
 // einzeiliger Kommentar
 let lat = -41.290;
 let lng = 174.006;
-let zoom = 5;
+let zoom = 11;
 
 let coords = [-41.290,174.006];
 //console.log(coords);
