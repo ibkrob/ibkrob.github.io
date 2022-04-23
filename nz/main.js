@@ -4,7 +4,7 @@ let lat = -41.290;
 let lng = 174.006;
 let zoom = 5;
 
-//let coords = [-39.13, 175.65];
+let coords = [-41.290,174.006];
 //console.log(coords);
 //console.log(coords[0]);
 //console.log(coords[1]);
