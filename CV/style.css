@@ -20,6 +20,23 @@ article {
   padding:0 1em;
 }
 
+button {
+  background-color: #e7e7e7; /* Grey */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #931a1a; /* red */
+  color: white;
+}
+
 section{
   margin: 1em;
   padding: 1em;
@@ -32,7 +49,7 @@ header, main, footer {
 header {
   padding: 2em;
   text-align: center;
-  background-image: url('./img/bg.jpg');
+  background-image: url('./images/bg.jpg');
   background-size: cover;
   background-position: fixed;
   color: white;
@@ -43,7 +60,7 @@ header section {
   max-width: 640px;
 }
 
-header img {
+header images {
   border-radius: 50%;
   max-width: 150px;
 }
