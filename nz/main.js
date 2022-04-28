@@ -26,7 +26,7 @@ let coords = [
 //console.log(ETAPPEN[0].lng)
 
 
-let map = L.map('map').setView(coords, zoom);
+var map = L.map('map').setView(coords, zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
@@ -35,12 +35,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-
-L.marker([lat, lng]).addTo(map)
-
-    .bindPopup(popup)
-
-    .openPopup();
 
 for (let etappe of ETAPPEN) {
     let popup = `
@@ -56,11 +50,11 @@ for (let etappe of ETAPPEN) {
 let mrk=L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
 if(etappe.nr == 11) {
     mrk.openPopup();
-
+    navClass ="etappenLink etappeAktuell";
 }
 
 //Etappennavigation erweitern
-let link = `<a href="https://${etappe.github}.github.io/nz" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
+let link = `<a href="https://${etappe.github}.github.io/nz" class="{navClass}" title="${etappe.titel}">${etappe.nr}</a>`;
 document.querySelector("#navigation").innerHTML += link;
 };
 
@@ -77,4 +71,5 @@ for (let hut of HUTS) {
         <hr>
         <a href="${hut.link}" target="Neuseeland" >Link zur Hütte </a>
     `;
+    L.circleMarker([hut.lat, hut.lng]).addTo(map).bindPopup(popup);
 };
