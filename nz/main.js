@@ -46,16 +46,16 @@ for (let etappe of ETAPPEN) {
             <li> <a href="https://${etappe.github}.github.io/nz/" > Link zur Etappenseite </a></li>
         </ul>
         `;
-//console.log(etappe);
-let mrk=L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
-if(etappe.nr == 11) {
-    mrk.openPopup();
-    navClass ="etappenLink etappeAktuell";
-}
+    //console.log(etappe);
+    let mrk = L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
+    if (etappe.nr == 11) {
+        mrk.openPopup();
+        navClass = "etappenLink etappeAktuell";
+    }
 
-//Etappennavigation erweitern
-let link = `<a href="https://${etappe.github}.github.io/nz" class="{navClass}" title="${etappe.titel}">${etappe.nr}</a>`;
-document.querySelector("#navigation").innerHTML += link;
+    //Etappennavigation erweitern
+    let link = `<a href="https://${etappe.github}.github.io/nz" class="{navClass}" title="${etappe.titel}">${etappe.nr}</a>`;
+    document.querySelector("#navigation").innerHTML += link;
 };
 
 
@@ -71,5 +71,15 @@ for (let hut of HUTS) {
         <hr>
         <a href="${hut.link}" target="Neuseeland" >Link zur Hütte </a>
     `;
-    L.circleMarker([hut.lat, hut.lng]).addTo(map).bindPopup(popup);
+    let statuscolor;
+    if (hut.open==true) {
+        statuscolor= "green"
+    } else {
+        statuscolor="red"
+    }
+
+        L.circleMarker([hut.lat, hut.lng], {
+            color: statuscolor
+        }).addTo(map).bindPopup(popup);
+
 };
