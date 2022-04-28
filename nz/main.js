@@ -1,10 +1,11 @@
 /* Neuseelandreise Skript */
 // einzeiliger Kommentar
-let lat = -41.290;
-let lng = 174.006;
 let zoom = 11;
 
-let coords = [-41.290, 174.006];
+let coords = [
+    ETAPPEN[10].lat,
+    ETAPPEN[13].lng
+];
 //console.log(coords);
 //console.log(coords[0]);
 //console.log(coords[1]);
@@ -25,18 +26,6 @@ let coords = [-41.290, 174.006];
 //console.log(ETAPPEN[0].lng)
 
 
-
-
-
-let popup = `
-        <h3> ${ETAPPEN[0].titel}  (Etappe ${ETAPPEN[0].nr}) </h3>
-        <ul>
-            <li> geogr. Länge: ${ETAPPEN[0].lng}</li>
-            <li> geogr. Breite: ${ETAPPEN[0].lat} </li>
-            <li> <a href="${ETAPPEN[0].wikipedia}" > Link zur Wikipediaseite </a></li>
-            <li> <a href="${ETAPPEN[0].github}" > Link zur Etappenseite </a></li>
-</ul>
-`;
 let map = L.map('map').setView(coords, zoom);
 
 
