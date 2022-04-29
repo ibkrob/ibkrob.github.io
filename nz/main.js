@@ -113,9 +113,9 @@ let layerControl = L.control.layers(
     layerControl.expand()
 
     let sightLayer=L.featureGroup();
-    layerControl.addOverlay(sightLayer, "Sehenswürdigkeiten");
+    layerControl.addOverlay(sightLayer, "Etappen");
 
-    let mrk= L.marker ([stephansdom.lat, stephansdom.lng]).addTo(sightLayer);
+    let mrk= L.marker ([etappe.lat, etappe.lng]).addTo(sightLayer);
 
     sightLayer.addTo(map);
 
@@ -127,5 +127,5 @@ let layerControl = L.control.layers(
     L.control.fullscreen().addTo(map);
 
     let miniMap= new L.Control.MiniMap(
-        L.tileLayer.provider("BasemapAT")
+        L.tileLayer.provider("OpenStreetMap.Mapnik")
     ).addTo(map);
