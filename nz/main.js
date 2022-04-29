@@ -1,11 +1,20 @@
 /* Neuseelandreise Skript */
 // einzeiliger Kommentar
-let zoom = 11;
-
 let coords = [
-    ETAPPEN[10].lat,
-    ETAPPEN[13].lng
+    ETAPPEN[11].lat,
+    ETAPPEN[11].lng
 ];
+
+let zoom= 11;
+
+// Baselayer 
+let startLayer = L.tileLayer.provider("Stadia.Outdoors");
+
+   
+let map = L.map('map').setView(coords, zoom);
+
+startLayer.addTo(map);
+
 //console.log(coords);
 //console.log(coords[0]);
 //console.log(coords[1]);
@@ -25,17 +34,6 @@ let coords = [
 //console.log(ETAPPEN[0].lat)
 //console.log(ETAPPEN[0].lng)
 
-
-var map = L.map('map').setView(coords, zoom);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-
-}).addTo(map);
-
-
-
 for (let etappe of ETAPPEN) {
     let popup = `
         <h3> ${etappe.titel}  (Etappe ${etappe.nr}) </h3>
@@ -47,6 +45,7 @@ for (let etappe of ETAPPEN) {
         </ul>
         `;
     //console.log(etappe);
+    let navClass = "etappenLink";
     let mrk = L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup)
     if (etappe.nr == 11) {
         mrk.openPopup();
@@ -84,9 +83,6 @@ for (let hut of HUTS) {
         }).addTo(map).bindPopup(popup);
 
 };
-
-    // Baselayer 
-let startLayer = L.tileLayer.provider("OpenStreetMap.Mapnik");
 
     // Weitere (weltweiten) Baselayer 
 let layerControl = L.control.layers(
