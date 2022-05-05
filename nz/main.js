@@ -8,7 +8,7 @@ let coords = [
 let zoom = 11;
 
 // Baselayer 
-let startLayer = L.tileLayer.provider("Stadia.Outdoors");
+let startLayer = L.tileLayer.provider("Stamen.Watercolor");
 
 
 let map = L.map('map').setView(coords, zoom);
@@ -23,7 +23,7 @@ L.control.scale({
 L.control.fullscreen().addTo(map);
 
 let miniMap = new L.Control.MiniMap(
-    L.tileLayer.provider("Stadia.Outdoors")
+    L.tileLayer.provider("Stamen.Watercolor")
 ).addTo(map);
 //console.log(coords);
 //console.log(coords[0]);
