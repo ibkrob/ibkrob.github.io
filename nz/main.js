@@ -92,17 +92,6 @@ let layerControl = L.control.layers(
         "Thunderforest SpinalMap": L.tileLayer.provider("Thunderforest.SpinalMap"),
         "Thunderforest Landscape": L.tileLayer.provider("Thunderforest.Landscape"),
         "Stamen Watercolor": L.tileLayer.provider("Stamen.Watercolor"),
-        "Stamen Terrain": L.tileLayer.provider("Stamen.Terrain"),
-        "Stamen schwarzweiß": L.tileLayer.provider("Stamen.TonerLite"),
-        "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery"),
-        "Mtb Map": L.tileLayer.provider("MtbMap"),
-        "NASA Earth at Night": L.tileLayer.provider("NASAGIBS.ViirsEarthAtNight2012"),
-        "NASA Terra": L.tileLayer.provider("NASAGIBS.ModisTerraTrueColorCR"),
-        "NASA Terrabands": L.tileLayer.provider("NASAGIBS.ModisTerraBands367CR"),
-        "Stamen Watercolor mit Beschriftung": L.layerGroup([
-            L.tileLayer.provider("Stamen Watercolor"),
-            L.tileLayer.provider("Stamen.TonerHybrid")
-        ])
         
     }).addTo(map);
 
