@@ -5,16 +5,26 @@ let coords = [
     ETAPPEN[11].lng
 ];
 
-let zoom= 11;
+let zoom = 11;
 
 // Baselayer 
 let startLayer = L.tileLayer.provider("Stadia.Outdoors");
 
-   
+
 let map = L.map('map').setView(coords, zoom);
 
 startLayer.addTo(map);
 
+// Maßstab hinzufügen
+L.control.scale({
+    imperial: false
+}).addTo(map);
+
+L.control.fullscreen().addTo(map);
+
+let miniMap = new L.Control.MiniMap(
+    L.tileLayer.provider("Stadia.Outdoors")
+).addTo(map);
 //console.log(coords);
 //console.log(coords[0]);
 //console.log(coords[1]);
@@ -71,46 +81,35 @@ for (let hut of HUTS) {
         <a href="${hut.link}" target="Neuseeland" >Link zur Hütte </a>
     `;
     let statuscolor;
-    if (hut.open==true) {
-        statuscolor= "green"
+    if (hut.open == true) {
+        statuscolor = "green"
     } else {
-        statuscolor="red"
+        statuscolor = "red"
     }
 
-        L.circleMarker([hut.lat, hut.lng], {
-            color: statuscolor,
-            radius:50
-        }).addTo(map).bindPopup(popup);
+    L.circleMarker([hut.lat, hut.lng], {
+        color: statuscolor,
+        radius: 50
+    }).addTo(map).bindPopup(popup);
 
 };
 
-    // Weitere (weltweiten) Baselayer 
-let layerControl = L.control.layers(
-    {   "OSM Standard": startLayer,
-        "OpenTopoMap": L.tileLayer.provider("OpenTopoMap"),
-        "Stadia Outdoors": L.tileLayer.provider("Stadia.Outdoors"),
-        "Thunderforest SpinalMap": L.tileLayer.provider("Thunderforest.SpinalMap"),
-        "Thunderforest Landscape": L.tileLayer.provider("Thunderforest.Landscape"),
-        "Stamen Watercolor": L.tileLayer.provider("Stamen.Watercolor"),
-        
-    }).addTo(map);
+// Weitere (weltweiten) Baselayer 
+let layerControl = L.control.layers({
+    "OSM Standard": startLayer,
+    "OpenTopoMap": L.tileLayer.provider("OpenTopoMap"),
+    "Stadia Outdoors": L.tileLayer.provider("Stadia.Outdoors"),
+    "Thunderforest SpinalMap": L.tileLayer.provider("Thunderforest.SpinalMap"),
+    "Thunderforest Landscape": L.tileLayer.provider("Thunderforest.Landscape"),
+    "Stamen Watercolor": L.tileLayer.provider("Stamen.Watercolor"),
 
-    layerControl.expand()
+}).addTo(map);
 
-    let sightLayer=L.featureGroup();
-    layerControl.addOverlay(sightLayer, "Etappen");
+layerControl.expand()
 
-    let mrk= L.marker ([etappe.lat, etappe.lng]).addTo(sightLayer);
+let sightLayer = L.featureGroup();
+layerControl.addOverlay(sightLayer, "Etappen");
 
-    sightLayer.addTo(map);
+let mrk = L.marker([etappe.lat, etappe.lng]).addTo(sightLayer);
 
-    // Maßstab hinzufügen
-    L.control.scale({
-        imperial:false
-    }).addTo(map);
-
-    L.control.fullscreen().addTo(map);
-
-    let miniMap= new L.Control.MiniMap(
-        L.tileLayer.provider("OpenStreetMap.Mapnik")
-    ).addTo(map);
+sightLayer.addTo(map);
