@@ -108,10 +108,10 @@ let layerControl = L.control.layers({
 }).addTo(map);
 
 layerControl.expand()
-
+/*
 let sightLayer = L.featureGroup();
 layerControl.addOverlay(sightLayer, "Etappen");
 
 let mrk = L.marker([etappe.lat, etappe.lng]).addTo(sightLayer);
 
-sightLayer.addTo(map);
+sightLayer.addTo(map);*/
