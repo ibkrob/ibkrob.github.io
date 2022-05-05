@@ -23,7 +23,9 @@ L.control.scale({
 L.control.fullscreen().addTo(map);
 
 let miniMap = new L.Control.MiniMap(
-    L.tileLayer.provider("Stamen.Watercolor")
+    L.tileLayer.provider("Stamen.Watercolor"),{ 
+    toggleDisplay: true
+}
 ).addTo(map);
 //console.log(coords);
 //console.log(coords[0]);
